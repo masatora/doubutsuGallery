@@ -1,0 +1,63 @@
+.heartCrimson {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    background-color: crimson;
+    transform: rotate(-45deg);
+    z-index: 10;
+}
+
+.heartCrimson:before, .heartCrimson:after {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    content: "";
+    background-color: crimson;
+    border-radius: 50%;
+}
+
+.heartCrimson:before {
+    top: -15px;
+    left: 0;
+}
+
+.heartCrimson:after {
+    left: 15px;
+    top: 0;
+}
+
+.heartPink {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    background-color: pink;
+    transform: rotate(-45deg);
+    z-index: 10;
+}
+
+.heartPink:before, .heartPink:after {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    content: "";
+    background-color: pink;
+    border-radius: 50%;
+}
+
+.heartPink:before {
+    top: -15px;
+    left: 0;
+}
+
+.heartPink:after {
+    left: 15px;
+    top: 0;
+}
