@@ -82,7 +82,7 @@ export default [
     },
     {
         photo: 'DCYWOYRW1Y.jpg',
-        article: 'cat',
+        article: 'fish',
         likes: {
             like: false,
             count: 0

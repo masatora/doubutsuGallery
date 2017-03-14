@@ -15,11 +15,14 @@ app.engine('html', ejs.renderFile);
 app.use('/src', express.static(pjPath + 'src'));
 
 app.use(devMidd(compiler, {
-    noInfo: true,
     publicPath: config.output.publicPath
 }));
 
-app.use(hotMidd(compiler));
+app.use(hotMidd(compiler, {
+    log: console.log,
+    path: '/__webpack_hmr',
+    heartbeat: 10 * 1000
+}));
 
 app.get('*', function(req, res){
     res.render('index');

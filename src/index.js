@@ -150,9 +150,7 @@ class AddComment extends React.Component {
                     <p><input type="text" className="form-control" ref="author" placeholder="Insert Your Name" required /></p>
                     <p><textarea className="form-control" ref="comment" placeholder="Insert Your Comment" rows="5" required /></p>
                     <p>
-                        <button type="button" className="btn btn-default btn-lg">
-                            <i id="i-ok" className={'fo fo-5x ' + (state[i].icon_ok ||'icon-ok-circled')} onClick={this.onOkClick.bind(this, i)} onMouseEnter={onOkEnter.bind(null, i)} onMouseLeave={onOkLeave.bind(null, i)}></i>
-                        </button>
+                        <i id="i-ok" className={'fo fo-5x ' + (state[i].icon_ok ||'icon-ok-circled')} onClick={this.onOkClick.bind(this, i)} onMouseEnter={onOkEnter.bind(null, i)} onMouseLeave={onOkLeave.bind(null, i)}></i>
                     </p>
                 </div>
             </div>
