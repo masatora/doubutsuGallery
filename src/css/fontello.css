@@ -54,25 +54,26 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-.fo-1x {
-    font-size: 1em;
-}
 .fo-2x {
-    font-size: 2em;
+    font-size: 2vh;
 }
 .fo-3x {
-    font-size: 3em;
+    font-size: 3vh;
 }
 .fo-4x {
-    font-size: 4em;
+    font-size: 4vh;
 }
 .fo-5x {
-    font-size: 5em;
+    font-size: 5vh;
 }
 .icon-heart:before { content: '\e800'; }
 .icon-heart-empty:before { content: '\e801'; }
 .icon-comment:before { content: '\e802'; }
+.icon-comment-empty:before {content: '\f0e5';}
 .icon-ok-circled2:before { content: '\e803'; }
 .icon-ok-circled:before { content: '\e804'; }
 .icon-clock:before { content: '\e805'; }
-.icon-comment-empty:before { content: '\f0e5'; }
+.icon-emo-happy:before { content: '\e806'; }
+.icon-emo-grin:before { content: '\e80c'; }
+.icon-emo-laugh:before { content: '\e812'; }
+

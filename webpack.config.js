@@ -8,6 +8,7 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 */
 var path = require('path');
 var webpack = require('webpack');
+var progressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -20,11 +21,6 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ],
   module: {
     loaders: [
       {
@@ -37,9 +33,9 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         include: path.join(__dirname, 'src'),
-        loader: 'style-loader!css-loader'
+        loader: 'style-loader!css-loader!sass-loader'
       },
       {
         //test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
@@ -48,6 +44,12 @@ module.exports = {
         loader: 'file-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new progressBarPlugin()
+  ]
 //  plugins: [HTMLWebpackPluginConfig],
 };

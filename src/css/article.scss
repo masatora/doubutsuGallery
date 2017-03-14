@@ -1,0 +1,16 @@
+.article-text {
+    font-size: 3rem;
+    color: gray;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+#edit-article {
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    border-bottom-style: dashed;
+}
