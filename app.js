@@ -32,3 +32,5 @@ app.listen(8080, 'localhost', function(error){
        return;
     }
 });
+
+console.log('Listen to http://localhost:8080/');
