@@ -28,9 +28,10 @@ app.get('*', function(req, res){
 
 app.listen(8080, 'localhost', function(error){
     if (error) {
-       console.log(error);
-       return;
+        console.log(error);
+        return;
+    } else {
+        console.log('\n\nlistening at http://localhost:8080/\n');
     }
 });
 
-console.log('Listen to http://localhost:8080/');

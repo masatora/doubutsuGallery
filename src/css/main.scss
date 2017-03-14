@@ -3,6 +3,7 @@
 @import 'heart.scss';
 @import 'article.scss';
 @import 'photo.scss';
+@import 'comment.scss';
 
 body {
     font-size: 62.5%;
@@ -21,59 +22,6 @@ a, a:hover, a:visited {
     bottom: 10px;
     right: 10px;
     z-index: 10;
-}
-
-#comments {
-    position: relative;
-    height: 45vh;
-    overflow-y: auto;
-
-    h3 {
-        color: gray;
-        text-align: right;
-        width: 98%;
-    }
-
-    p {
-        color: gray;
-        font-size: 2rem;
-        word-wrap: break-word;
-        width: 98%;
-        border-bottom: 2px dotted gray;
-    }
-}
-
-#add-comment {
-    clear: both;
-    position: relative;
-    overflow: hidden;
-
-    #avatar {
-        float: left;
-        width: 20%;
-        text-align: center;
-
-        #i-head {
-            color: gray;
-        }
-    }
-
-    form {
-        overflow: hidden;
-    }
-
-    #fields {
-        float: left;
-        width: 100%;
-
-        p:nth-child(3) {
-            text-align: right;
-
-            #i-ok {
-                color: gray;
-            }
-        }
-    }
 }
 
 #detail-frame {
