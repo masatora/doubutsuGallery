@@ -7,12 +7,11 @@ var ejs  = require('ejs');
 var config = require('./webpack.config');
 var compiler = webpack(config);
 var app  = express();
-var pjPath = '/root/github/doubutsuGallery/';
 
-app.set('views', pjPath + 'views');
+app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
-app.use('/src', express.static(pjPath + 'src'));
+app.use('/src', express.static(__dirname + '/src'));
 
 app.use(devMidd(compiler, {
     publicPath: config.output.publicPath
