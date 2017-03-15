@@ -2,8 +2,14 @@
 This is a practice of react and redux.
 
 # installation
-1. **sudo npm install**
-2. if node-sass occured error 
-   **sudo npm install --unsafe-perm --save node-sass**
-3. **sudo npm start**
-4. visit http://localhost:8080/
+```bash
+sudo npm install
+```
+if node-sass occured error.
+```bash   
+sudo npm install --unsafe-perm --save node-sass
+```
+```bash
+sudo npm start**
+```
+visit http://localhost:8080/
