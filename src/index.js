@@ -135,7 +135,7 @@ class AddComment extends React.Component {
         e.preventDefault();
 
         const r = this.refs;
-        if (r.author.value !== '' && r.comment.value !== '') {
+        if (r.author.value.trim() !== '' && r.comment.value.trim() !== '') {
             this.props.onOkClick(i, {[r.author.value]: r.comment.value});
             r.author.value = '';
             r.comment.value = '';
