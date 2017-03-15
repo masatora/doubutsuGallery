@@ -2,14 +2,20 @@
 This is a practice of react and redux.
 
 # installation
+clone this repo.
 ```bash
-sudo npm install
+$ git clone https://github.com/masatora/doubutsuGallery.git
+```
+then install.
+```bash
+$ sudo npm install
 ```
 if node-sass occured error.
 ```bash   
-sudo npm install --unsafe-perm --save node-sass
+$ sudo npm install --unsafe-perm --save node-sass
 ```
+start service.
 ```bash
-sudo npm start**
+$ sudo npm start
 ```
-visit http://localhost:8080/
+open browser and visit http://localhost:8080/
