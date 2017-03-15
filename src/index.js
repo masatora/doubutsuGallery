@@ -17,7 +17,7 @@ class Photo extends React.Component {
         const isDetail = /detail/.test(location.pathname);
 
         return (
-            <div className={"col-sm-12 "+(isDetail ? 'col-md-7 col-lg-7 item-detail' : 'col-md-5 col-lg-5 item')}>
+            <div className={"col-sm-12 "+(isDetail ? 'col-md-7 col-lg-7 item-detail' : 'col-md-3 col-lg-3 item')}>
                 <figure className="wrap">
                     <div className="img-wrap">
                         <Link to={this.props.method + item.photo}>
