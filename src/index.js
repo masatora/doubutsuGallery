@@ -119,7 +119,7 @@ class PhotoDetail extends React.Component {
                         </form>
                         <hr />
                     </div>
-                    <Comments {...this.props} comments={state[this.idx].comments} />
+                    <Comments {...this.props} comments={state[this.idx].comments} i={this.idx} />
                 </div>
             </div>
         );
@@ -161,23 +161,14 @@ class AddComment extends React.Component {
 class Comments extends React.Component {
     constructor (props) {
         super(props);
-
-        this.state = {commentIcon: 'icon-comment'};
-    }
-
-    onCommEnter () {
-        this.setState({commentIcon: 'icon-comment-empty'});
-    }
-
-    onCommLeave () {
-        this.setState({commentIcon: 'icon-comment'});
     }
 
     render () {
+        const {i, state, onCommentEnter, onCommentLeave} = this.props;
         return (
             <div id="comments">
                 <h3>
-                    <i id="i-comment" className={'fo fo-5x '+this.state.commentIcon} onMouseEnter={this.onCommEnter.bind(this)} onMouseLeave={this.onCommLeave.bind(this)}></i>
+                    <i id="i-comment" className={'fo fo-5x '+ (state[i].icon_comment || 'icon-comment')} onMouseEnter={onCommentEnter.bind(null, i)} onMouseLeave={onCommentLeave.bind(null, i)}></i>
                 </h3>
                 {
                     this.props.comments.map((v, k) => { 
@@ -252,6 +243,12 @@ const reducer = (state = [], action) => {
         case 'ON_TEXT_CLICK':
             state[i].isText = false;
             return [...state];
+        case 'ON_COMMENT_ENTER':
+            state[i]['icon_comment'] = 'icon-comment-empty';
+            return [...state];
+        case 'ON_COMMENT_LEAVE':
+            state[i]['icon_comment'] = 'icon-comment';
+            return [...state];
         case 'ON_ARTICLE_SEND':
             state[i].isText = true;
             state[i].article = action.article;
@@ -275,6 +272,8 @@ const mapDispatchToProp = (dispatch) => {
         onOkLeave: (i) => dispatch({type: 'ON_OK_LEAVE', i}),
         onOkClick: (i, comment) => dispatch({type: 'ON_OK_CLICK', i, comment}),
         onTextClick: (i) => dispatch({type: 'ON_TEXT_CLICK', i}),
+        onCommentEnter: (i) => dispatch({type: 'ON_COMMENT_ENTER', i}),
+        onCommentLeave: (i) => dispatch({type: 'ON_COMMENT_LEAVE', i}),
         onArticleSend: (i, article) => dispatch({type: 'ON_ARTICLE_SEND', i, article})
     };
 };
