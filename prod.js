@@ -15,12 +15,7 @@ app.get('*', function(req, res){
     res.end();
 });
 
-app.listen(8081, 'localhost', function(error){
-    if (error) {
-        console.log(error);
-        return;
-    } else {
-        console.log('\n\nlistening at http://localhost:8081/\n');
-    }
-});
+app.listen(8081);
+
+console.log('\n\nlistening at http://localhost:8081/\n');
 
