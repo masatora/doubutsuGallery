@@ -82,7 +82,6 @@ class PhotoList extends React.Component {
     }
 
     render () {
-        console.log('welcom test');
         return (
             <div className="row">
             {
