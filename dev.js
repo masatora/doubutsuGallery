@@ -12,6 +12,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
 app.use('/src', express.static(__dirname + '/src'));
+app.use('/static', express.static(__dirname + '/static'));
 
 app.use(devMidd(compiler, {
     publicPath: config.output.publicPath

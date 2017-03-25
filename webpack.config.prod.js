@@ -17,7 +17,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        include: path.join(__dirname, 'src'),
+        include: [path.join(__dirname, 'src'), path.join(__dirname, 'static')],
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        include: path.join(__dirname, 'src'),
+        include: path.join(__dirname, 'static'),
         loader: 'style-loader!css-loader!sass-loader'
       },
       {
