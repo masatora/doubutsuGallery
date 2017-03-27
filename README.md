@@ -20,7 +20,7 @@ start service.
 ```bash
 $ sudo npm start
 ```
-open browser and visit http://localhost:8081/
+open the browser and visit http://localhost:8081/
 
 ## use Continuous integration to start service
 ### docker :
@@ -32,7 +32,7 @@ create a container.
 ```bash
 $ docker run -d --name=doubutsu -p 8081:8081 doubutsu
 ```
-wait 20 seconds for webpack then open browser and visit http://localhost:8081/
+wait 20 seconds for webpack then open the browser and visit http://localhost:8081/
 ### jenkins :
 add the shell script in the jenkins job.
 ```bash
@@ -40,5 +40,5 @@ docker restart doubutsu
 ```
 then trigger it and wait...
 ```bash
-$ curl --user <user:passwd> -s http://localhost:8080/job/<job name>/build?token=<token>
+$ curl --user [user:passwd] -s http://localhost:8080/job/[job name]/build?token=[token]
 ```
