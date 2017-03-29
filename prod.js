@@ -16,7 +16,7 @@ app.get('*', function(req, res){
     res.end();
 });
 
-app.listen(8081);
+app.listen(process.env.PORT || 8081);
 
 console.log('\n\nlistening at http://localhost:8081/\n');
 
