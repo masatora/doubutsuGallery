@@ -18,10 +18,6 @@ export function onOkLeave(i) {
     return {type: 'ON_OK_LEAVE', i};
 };
 
-export function onOkClick(i, comment) {
-    return {type: 'ON_OK_CLICK', i, comment};
-};
-
 export function onTextClick(i) {
     return {type: 'ON_TEXT_CLICK', i};
 };
@@ -32,6 +28,10 @@ export function onCommentEnter(i) {
 
 export function onCommentLeave(i) {
     return {type: 'ON_COMMENT_LEAVE', i};
+};
+
+export function onOkClick(i, comment) {
+    return {type: 'ON_OK_CLICK', i, comment};
 };
 
 export function onArticleSend(i, article) {

@@ -1,8 +1,7 @@
 var express = require('express');
 var webpack = require('webpack');
-var path = require('path');
-var ejs  = require('ejs');
-var app  = express();
+var ejs = require('ejs');
+var app = express();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');

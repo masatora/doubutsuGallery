@@ -3,7 +3,7 @@ const reducer = (state = [], action) => {
     const buildState = (insertValue) => {
         return [
             ...state.slice(0, i),
-            {...state[i],  ...insertValue},
+            {...state[i], ...insertValue},
             ...state.slice(i + 1)
         ];
     };

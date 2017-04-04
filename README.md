@@ -1,7 +1,7 @@
 # doubutsuGallery
 This is a practice of react and redux.
 
-# installation
+# Installation
 Here have two different ways to install the project.
 ## use npm to start service
 clone this repo.
