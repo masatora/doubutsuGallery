@@ -19,14 +19,14 @@ const reducer = (state = [], action) => {
             return buildState({icon_ok: 'icon-ok-circled2'});
         case 'ON_OK_LEAVE':
             return buildState({icon_ok: 'icon-ok-circled'});
-        case 'ON_OK_CLICK':
-            return buildState({comments: [action.comment].concat(state[i].comments)});
         case 'ON_TEXT_CLICK':
             return buildState({isText: false});
         case 'ON_COMMENT_ENTER':
             return buildState({icon_comment: 'icon-comment-empty'});
         case 'ON_COMMENT_LEAVE':
             return buildState({icon_comment: 'icon-comment'});
+        case 'ON_OK_CLICK':
+            return buildState({comments: [action.comment].concat(state[i].comments)});
         case 'ON_ARTICLE_SEND':
             return buildState({isText: true, article: action.article});
         default:

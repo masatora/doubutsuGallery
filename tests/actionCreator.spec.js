@@ -4,10 +4,10 @@ import {onHeartClick, onAvatarEnter, onAvatarLeave, onOkEnter, onOkLeave, onOkCl
 describe('Action Creators', () => {
     describe('Heart Click', () => {
         it('should change color of heart', () => {
-            const actual = onHeartClick(1);
+            const actual = onHeartClick(0);
             const expected = {
                 type: 'ON_HEART_CLICK',
-                i: 1
+                i: 0
             };
             expect(actual).to.be.deep.equal(expected);
         });
@@ -15,10 +15,10 @@ describe('Action Creators', () => {
 
     describe('Avatar Enter', () => {
         it('should change icon of avatar', () => {
-            const actual = onAvatarEnter(2);
+            const actual = onAvatarEnter(1);
             const expected = {
                 type: 'ON_AVATAR_ENTER',
-                i: 2
+                i: 1
             };
             expect(actual).to.be.deep.equal(expected);
         });
@@ -26,10 +26,10 @@ describe('Action Creators', () => {
 
     describe('Avatar Leave', () => {
         it('should change icon of avatar', () => {
-            const actual = onAvatarLeave(3);
+            const actual = onAvatarLeave(2);
             const expected = {
                 type: 'ON_AVATAR_LEAVE',
-                i: 3
+                i: 2
             };
             expect(actual).to.be.deep.equal(expected);
         });
@@ -37,10 +37,10 @@ describe('Action Creators', () => {
 
     describe('OK Button Enter', () => {
         it('should change icon of OK button', () => {
-            const actual = onOkEnter(4);
+            const actual = onOkEnter(3);
             const expected = {
                 type: 'ON_OK_ENTER',
-                i: 4
+                i: 3
             };
             expect(actual).to.be.deep.equal(expected);
         });
@@ -48,10 +48,10 @@ describe('Action Creators', () => {
 
     describe('OK Button Leave', () => {
         it('should change icon of OK Button', () => {
-            const actual = onOkLeave(5);
+            const actual = onOkLeave(4);
             const expected = {
                 type: 'ON_OK_LEAVE',
-                i: 5
+                i: 4
             };
             expect(actual).to.be.deep.equal(expected);
         });
@@ -59,10 +59,10 @@ describe('Action Creators', () => {
 
     describe('Article Click', () => {
         it('should change html tag to input', () => {
-            const actual = onTextClick(6);
+            const actual = onTextClick(5);
             const expected = {
                 type: 'ON_TEXT_CLICK',
-                i: 6
+                i: 5
             };
             expect(actual).to.be.deep.equal(expected);
         });
@@ -70,10 +70,10 @@ describe('Action Creators', () => {
 
     describe('Icon of Comment Enter', () => {
         it('should change icon of comment', () => {
-            const actual = onCommentEnter(7);
+            const actual = onCommentEnter(6);
             const expected = {
                 type: 'ON_COMMENT_ENTER',
-                i: 7
+                i: 6
             };
             expect(actual).to.be.deep.equal(expected);
         });
@@ -81,10 +81,10 @@ describe('Action Creators', () => {
 
     describe('Icon of Comment Leave', () => {
         it('should change icon of comment', () => {
-            const actual = onCommentLeave(8);
+            const actual = onCommentLeave(7);
             const expected = {
                 type: 'ON_COMMENT_LEAVE',
-                i: 8
+                i: 7
             };
             expect(actual).to.be.deep.equal(expected);
         });
@@ -92,10 +92,10 @@ describe('Action Creators', () => {
 
     describe('OK Button Click', () => {
         it('should send comment', () => {
-            const actual = onOkClick(9, {});
+            const actual = onOkClick(8, {});
             const expected = {
                 type: 'ON_OK_CLICK',
-                i: 9,
+                i: 8,
                 comment: {}
             };
             expect(actual).to.be.deep.equal(expected);
@@ -104,10 +104,10 @@ describe('Action Creators', () => {
 
     describe('Sent Article', () => {
         it('should send article', () => {
-            const actual = onArticleSend(10, '');
+            const actual = onArticleSend(9, '');
             const expected = {
                 type: 'ON_ARTICLE_SEND',
-                i: 10,
+                i: 9,
                 article: ''
             };
             expect(actual).to.be.deep.equal(expected);
