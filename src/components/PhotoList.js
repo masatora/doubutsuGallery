@@ -9,13 +9,13 @@ class PhotoList extends React.Component {
     render () {
         return (
             <div className="row">
-            {
-                this.props.state.map((e, i) => { 
-                    return (
-                        <Photo {...this.props} key={i} i={i} item={e} method="/detail/" msg="show detail" />
-                    );
-                })
-            }
+                {
+                    this.props.state.map((e, i) => { 
+                        return (
+                            <Photo {...this.props} key={i} i={i} item={e} method="/detail/" msg="show detail" />
+                        );
+                    })
+                }
             </div>
         );
     }

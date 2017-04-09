@@ -6,7 +6,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['cat']
     },
     {
         photo: '1486268576434.jpg',
@@ -15,7 +16,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['dog']
     },
     {
         photo: 'H28JZPIS0O.jpg',
@@ -24,7 +26,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['fox']
     },
     {
         photo: '1482024639336.jpg',
@@ -33,7 +36,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['cat']
     },
     {
         photo: '1487297912369.jpg',
@@ -42,7 +46,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['cat']
     },
     {
         photo: '6D9ZGTX4PR.jpg',
@@ -51,7 +56,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['dog']
     },
     {
         photo: 'ZQ07XT5PHK.jpg',
@@ -60,7 +66,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['cat']
     },
     {
         photo: '1485832103067.jpg',
@@ -69,7 +76,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['cat']
     },
     {
         photo: '1487672672809.jpg',
@@ -78,7 +86,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['cat']
     },
     {
         photo: 'DCYWOYRW1Y.jpg',
@@ -87,7 +96,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['fish']
     },
     {
         photo: 'ZX3C55Y16D.jpg',
@@ -96,7 +106,8 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['dog']
     },
     {
         photo: '9527441280.jpg',
@@ -105,6 +116,7 @@ export default [
             like: false,
             count: 0
         },
-        comments: [{masatora: 'test comment'}, {hello: 'world'}]
+        comments: [{masatora: 'test comment'}, {hello: 'world'}],
+        tag: ['deer']
     },
 ];

@@ -37,3 +37,11 @@ export function onOkClick(i, comment) {
 export function onArticleSend(i, article) {
     return {type: 'ON_ARTICLE_SEND', i, article};
 };
+
+export function onTagAppend(i, tag) {
+    return {type: 'ON_TAG_APPEND', i, tag};
+}
+
+export function onTagRemove(i, idx) {
+    return {type: 'ON_TAG_REMOVE', i, idx};
+}

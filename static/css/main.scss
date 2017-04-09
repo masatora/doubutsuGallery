@@ -4,6 +4,7 @@
 @import 'article.scss';
 @import 'photo.scss';
 @import 'comment.scss';
+@import 'tag.scss';
 
 body {
     font-size: 62.5%;
@@ -38,4 +39,12 @@ a, a:hover, a:visited {
     img {
         width: 100%;
     }
+}
+
+.text-gray {
+    color: gray;
+}
+
+.pointer {
+    cursor: pointer;
 }

@@ -12,7 +12,7 @@ const reducer = (state = [], action) => {
         case 'ON_HEART_CLICK':
             return buildState({likes: {like: !state[i].likes.like}});
         case 'ON_AVATAR_ENTER':
-            return buildState({avatar: 'icon-emo-laugh'});
+            return buildState({avatar: 'icon-emo-devil'});
         case 'ON_AVATAR_LEAVE':
             return buildState({avatar: 'icon-emo-happy'});
         case 'ON_OK_ENTER':
@@ -29,6 +29,10 @@ const reducer = (state = [], action) => {
             return buildState({comments: [action.comment].concat(state[i].comments)});
         case 'ON_ARTICLE_SEND':
             return buildState({isText: true, article: action.article});
+        case 'ON_TAG_APPEND':
+            return buildState({tag: state[i].tag.concat(action.tag)});
+        case 'ON_TAG_REMOVE':
+            return buildState({tag: state[i].tag.filter((e, index) => {return index !== action.idx;})});
         default:
             return state;
     }
