@@ -1,17 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class Tag extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
     showTagInput () {
         document.getElementById('append-tag').className = 'show';
         document.getElementById('show-tags').className = 'hide';
-    }
-
-    onTagRemove () {
-        console.log('hello');
     }
 
     onTagAppend (i, e) {
@@ -36,7 +33,7 @@ class Tag extends React.Component {
                         state[i].tag.map((e, idx) => {
                             return (
                                 <span className="tag pointer" key={idx}>
-                                    {e}
+                                    <Link to={'/Keyword/' + e}>{e}</Link>
                                     <i className="fo fo-2x icon-cancel-circled" onClick={onTagRemove.bind(this, i, idx)}></i>
                                 </span>
                             );

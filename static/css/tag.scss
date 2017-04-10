@@ -13,4 +13,9 @@
     border: 2px solid #ddd;
     margin: 5px;
     padding: 10px;
+
+    a, a:active, a:visited, a:link {
+        color: white;
+        text-decoration: none;
+    }
 }

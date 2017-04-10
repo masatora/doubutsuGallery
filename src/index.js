@@ -7,6 +7,7 @@ import css from '../static/css/main.scss';
 import PhotoList from './components/PhotoList';
 import PhotoDetail from './components/PhotoDetail';
 import ViewPhoto from './components/ViewPhoto';
+import Keyword from './components/Keyword';
 //store, connect actions and state
 import {store, app} from './storeApp';
 
@@ -17,6 +18,7 @@ render(
                 <IndexRoute component={PhotoList} />
                 <Route path="/detail/:id" component={PhotoDetail} />
                 <Route path="/image/:id" component={ViewPhoto} />
+                <Route path="/keyword/:tag" component={Keyword} />
             </Route>
         </Router>
     </Provider>,
