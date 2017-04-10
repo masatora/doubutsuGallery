@@ -24,7 +24,7 @@ describe('Reducer', () => {
     describe('Avatar Enter', () => {
         it('should change icon of avatar', () => {
             const i = 1;
-            expect(actual({i, type: 'ON_AVATAR_ENTER'})).to.be.deep.equal(expected(i, {avatar: 'icon-emo-laugh'}));
+            expect(actual({i, type: 'ON_AVATAR_ENTER'})).to.be.deep.equal(expected(i, {avatar: 'icon-emo-devil'}));
         });
     });
 

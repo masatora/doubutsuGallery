@@ -6,11 +6,11 @@
     "node": "6.10.0"
   },
   "scripts": {
-    "build:webpack": "set NODE_ENV=production && webpack --config webpack.config.prod.js",
+    "build:webpack": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "clean": "rimraf dist",
     "start": "node dev.js",
-    "test": "./node_modules/.bin/mocha \"tests/*.spec.js\" --compilers js:babel-core/register"
+    "test": "NODE_ENV=production ./node_modules/.bin/mocha \"tests/*.spec.js\" --compilers js:babel-core/register"
   },
   "author": "masatora",
   "license": "MIT",
@@ -58,20 +58,38 @@
     "react-addons-test-utils": "^15.4.2"
   },
   "babel": {
-    "presets": ["react", "es2015"],
+    "presets": [
+      "react",
+      "es2015"
+    ],
     "env": {
       "development": {
         "plugins": [
-          ["transform-object-rest-spread"], ["transform-react-display-name"], ["react-transform", {
+          [
+            "transform-object-rest-spread"
+          ],
+          [
+            "transform-react-display-name"
+          ],
+          [
+            "react-transform",
+            {
               "transforms": [
                 {
                   "transform": "react-transform-hmr",
-                  "imports": ["react"],
-                  "locals": ["module"]
+                  "imports": [
+                    "react"
+                  ],
+                  "locals": [
+                    "module"
+                  ]
                 },
                 {
                   "transform": "react-transform-catch-errors",
-                  "imports": ["react", "redbox-react"]
+                  "imports": [
+                    "react",
+                    "redbox-react"
+                  ]
                 }
               ]
             }
@@ -80,7 +98,12 @@
       },
       "production": {
         "plugins": [
-          ["transform-object-rest-spread"], ["transform-react-display-name"]
+          [
+            "transform-object-rest-spread"
+          ],
+          [
+            "transform-react-display-name"
+          ]
         ]
       }
     }
@@ -96,8 +119,14 @@
     },
     "parser": "babel-eslint",
     "rules": {
-      "quotes": [2, "single"],
-      "strict": [2, "never"],
+      "quotes": [
+        2,
+        "single"
+      ],
+      "strict": [
+        2,
+        "never"
+      ],
       "babel/generator-star-spacing": 1,
       "babel/new-cap": 1,
       "babel/object-shorthand": 1,
@@ -107,6 +136,9 @@
       "react/jsx-uses-vars": 2,
       "react/react-in-jsx-scope": 2
     },
-    "plugins": ["babel", "react"]
+    "plugins": [
+      "babel",
+      "react"
+    ]
   }
 }
