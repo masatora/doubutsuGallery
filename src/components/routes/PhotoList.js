@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from './Photo';
+import Photo from '../parts/Photo';
 
 class PhotoList extends React.Component {
     constructor (props) {

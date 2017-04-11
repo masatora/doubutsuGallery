@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from './Photo';
+import Photo from '../parts/Photo';
 
 class Keyword extends React.Component {
     constructor (props) {

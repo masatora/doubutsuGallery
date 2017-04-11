@@ -4,10 +4,10 @@ import {Provider} from 'react-redux';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import css from '../static/css/main.scss';
 //components
-import PhotoList from './components/PhotoList';
-import PhotoDetail from './components/PhotoDetail';
-import ViewPhoto from './components/ViewPhoto';
-import Keyword from './components/Keyword';
+import PhotoList from './components/routes/PhotoList';
+import PhotoDetail from './components/routes/PhotoDetail';
+import ViewPhoto from './components/routes/ViewPhoto';
+import Keyword from './components/routes/Keyword';
 //store, connect actions and state
 import {store, app} from './storeApp';
 

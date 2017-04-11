@@ -1,8 +1,8 @@
 import React from 'react';
-import Photo from './Photo';
-import AddComment from './AddComment';
-import Comments from './Comments';
-import Tag from './Tag';
+import Photo from '../parts/Photo';
+import AddComment from '../parts/AddComment';
+import Comments from '../parts/Comments';
+import Tag from '../parts/Tag';
 
 class PhotoDetail extends React.Component {
     constructor (props) {
