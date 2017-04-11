@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {onHeartClick, onAvatarEnter, onAvatarLeave, onOkEnter, onOkLeave, onOkClick, onTextClick, onCommentEnter, onCommentLeave, onArticleSend} from '../src/actions/actionCreators';
+import {onHeartClick, onAvatarEnter, onAvatarLeave, onOkEnter, onOkLeave, onOkClick, onTextClick, onCommentEnter, onCommentLeave, onArticleSend, onTagAppend, onTagRemove} from '../src/actions/actionCreators';
 
 describe('Action Creators', () => {
     describe('Heart Click', () => {
@@ -91,7 +91,7 @@ describe('Action Creators', () => {
     });
 
     describe('OK Button Click', () => {
-        it('should send comment', () => {
+        it('should send a comment', () => {
             const actual = onOkClick(8, {});
             const expected = {
                 type: 'ON_OK_CLICK',
@@ -103,12 +103,36 @@ describe('Action Creators', () => {
     });
 
     describe('Sent Article', () => {
-        it('should send article', () => {
+        it('should send an article', () => {
             const actual = onArticleSend(9, '');
             const expected = {
                 type: 'ON_ARTICLE_SEND',
                 i: 9,
                 article: ''
+            };
+            expect(actual).to.be.deep.equal(expected);
+        });
+    });
+
+    describe('Append Tag', () => {
+        it('should append a new tag', () => {
+            const actual = onTagAppend(10, 'new_tag');
+            const expected = {
+                type: 'ON_TAG_APPEND',
+                i: 10,
+                tag: 'new_tag'
+            };
+            expect(actual).to.be.deep.equal(expected);
+        });
+    });
+
+    describe('Remove Tag', () => {
+        it('should remove a tag', () => {
+            const actual = onTagRemove(11, 0);
+            const expected = {
+                type: 'ON_TAG_REMOVE',
+                i: 11,
+                idx: 0
             };
             expect(actual).to.be.deep.equal(expected);
         });

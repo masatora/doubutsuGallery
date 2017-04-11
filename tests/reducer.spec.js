@@ -71,16 +71,30 @@ describe('Reducer', () => {
     });
 
     describe('OK Button Click', () => {
-        it('should send comment', () => {
+        it('should send a comment', () => {
             const i = 8;
             expect(actual({i, type: 'ON_OK_CLICK', comment: {'abc': 'wwwww'}})).to.be.deep.equal(expected(i, {comments: [{'abc': 'wwwww'}].concat(data[i].comments)}));
         });
     });
 
     describe('Sent Article', () => {
-        it('should send article', () => {
+        it('should send an article', () => {
             const i = 9;
             expect(actual({i, type: 'ON_ARTICLE_SEND', isText: true, article: 'abc'})).to.be.deep.equal(expected(i, {isText: true, article: 'abc'}));
+        });
+    });
+
+    describe('Append Tag', () => {
+        it('should append a new tag', () => {
+            const i = 10;
+            expect(actual({i, type: 'ON_TAG_APPEND', tag: 'new_tag'})).to.be.deep.equal(expected(i, {tag: data[i].tag.concat('new_tag')}));
+        });
+    });
+
+    describe('Remove Tag', () => {
+        it('should remove a tag', () => {
+            const i = 11;
+            expect(actual({i, type: 'ON_TAG_REMOVE', idx: 0})).to.be.deep.equal(expected(i, {tag: data[i].tag.filter((e, index) => {return index !== 0;})}));
         });
     });
 });
