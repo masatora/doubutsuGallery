@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is a practice of react and redux",
   "engins": {
-    "node": "6.10.0"
+    "node": "6.11.1"
   },
   "scripts": {
     "build:webpack": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
